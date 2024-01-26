@@ -51,6 +51,7 @@ fieldset {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+  background-color: #1e2227;
   button {
     padding: 10px 14px;
     border: 1px solid #292f36;
