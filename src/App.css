@@ -4,7 +4,9 @@
   padding: 2rem;
   text-align: center;
 }
-
+body {
+  background-color: #0b0e11;
+}
 h1 {
   margin-bottom: 12px;
 }
@@ -13,7 +15,7 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 24px;
+  gap: 5px;
   flex-wrap: wrap;
 }
 
@@ -35,14 +37,14 @@ legend {
   display: flex;
   padding: 5px;
   text-transform: uppercase;
-  color: #3742fa;
+  color: #4b5663;
   font-weight: 500;
   font-size: 12px;
 }
 
 fieldset {
   padding: 10px;
-  border: 2px solid #f1f2f6;
+  border: 1px solid #292f36;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -51,21 +53,30 @@ fieldset {
   flex-wrap: wrap;
   button {
     padding: 10px 14px;
-    border: 2px solid #f1f2f6;
+    border: 1px solid #292f36;
     border-radius: 8px;
     min-width: 120px;
+    font-size: 16px;
 
     &:hover {
-      background-color: #dfe4ea;
+      border: 1px solid #3742fa;
+      color: white;
+      transform: all 3000ms ease-in-out;
+      background-color: #3741fa27;
     }
   }
 }
 
 .active {
   background-color: #2f3542;
-  color: white;
-}
-.in-active {
-  background-color: #dfe4ea;
   color: #747d8c;
+}
+
+.active-btn--highlight {
+  background-color: #3742fa;
+  color: white;
+  border: 1px solid #3742fa;
+}
+h1 {
+  color: #5352ed;
 }

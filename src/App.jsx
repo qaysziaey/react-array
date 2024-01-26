@@ -5,20 +5,11 @@ import { Card } from "./components/Card";
 import { users } from "./data/users";
 
 function App() {
-  const [filter, setFilter] = useState(false);
-  const [sort, setSort] = useState("All");
+  //sort: "age", "name"
+  const [sort, setSort] = useState("age");
 
-  const handleSort = () => {
-    const sortUsers = users.slice(0, 2).sort((a, b) => a.age - b.age);
-  };
-  const handleFilter = () => {
-    if (filter === true) {
-      setFilter(false);
-      console.log("Filter is", filter);
-    } else {
-      setFilter(true);
-    }
-  };
+  // filter: "all", "men", "women"
+  const [filter, setFilter] = useState("all");
 
   return (
     <>
@@ -26,31 +17,89 @@ function App() {
         <h1>Array function magic </h1>
         <div className="legend-container">
           <fieldset>
-            <legend>Sort</legend>
+            <legend>Filter</legend>
             <button
-              style={{
-                backgroundColor: filter ? "#2ed573" : "#f1f2f6",
-                color: "white",
+              className={`active ${
+                filter === "all" ? "active-btn--highlight" : ""
+              }`}
+              onClick={() => {
+                setFilter("all");
               }}
-              onClick={handleFilter}
             >
               All
             </button>
-            <button>Male</button>
-            <button>Female</button>
+            <button
+              className={`active ${
+                filter === "men" ? "active-btn--highlight" : ""
+              }`}
+              onClick={() => {
+                setFilter("men");
+              }}
+            >
+              Men
+            </button>
+            <button
+              className={`active ${
+                filter === "women" ? "active-btn--highlight" : ""
+              }`}
+              onClick={() => {
+                setFilter("women");
+              }}
+            >
+              Women
+            </button>
           </fieldset>
           <fieldset>
-            <legend>Filter</legend>
-            <button>By name</button>
-            <button>By Age</button>
+            <legend>Sort</legend>
+            <button
+              className={`active ${
+                sort === "name" ? "active-btn--highlight" : ""
+              }`}
+              onClick={() => {
+                setSort("name");
+              }}
+            >
+              By Name
+            </button>
+            <button
+              className={`active ${
+                sort === "age" ? "active-btn--highlight" : ""
+              }`}
+              onClick={() => {
+                setSort("age");
+              }}
+            >
+              By Age
+            </button>
           </fieldset>
         </div>
       </header>
       <main>
         <section className="card-list">
-          {users.map((user) => {
-            return <Card key={user.email} user={user} />;
-          })}
+          {users
+            .filter((user) => {
+              if (filter === "all") {
+                return true;
+              }
+              if (filter === "men") {
+                return user.gender === "male";
+              }
+              if (filter === "women") {
+                return user.gender === "female";
+              }
+              return false;
+            })
+            .sort((a, b) => {
+              if (sort === "age") {
+                return a.dob.age - b.dob.age;
+              }
+              if (sort === "name") {
+                return a.name.last.localeCompare(b.name.last);
+              }
+            })
+            .map((user) => {
+              return <Card key={user.email} user={user} />;
+            })}
         </section>
       </main>
     </>
