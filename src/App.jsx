@@ -9,7 +9,7 @@ function App() {
         <h1>Array function magic</h1>
         <fieldset>
           <legend>Filter cards</legend>
-          <button>All</button>
+          <button className="active">All</button>
           <button>Male</button>
           <button>Female</button>
           <button>By name</button>

@@ -33,13 +33,31 @@ legend {
 
 fieldset {
   padding: 10px;
-  border: 2px solid black;
+  border: 2px solid #f1f2f6;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   button {
-    padding: 10px;
+    padding: 10px 14px;
+    border: 2px solid #f1f2f6;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: #dfe4ea;
+    }
+    &:active {
+      background-color: #2f3542;
+      color: white;
+    }
+    &:visited {
+      border: 2px solid #2f3542;
+    }
   }
+}
+
+.active {
+  background-color: #2f3542;
+  color: white;
 }
