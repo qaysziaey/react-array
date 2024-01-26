@@ -22,3 +22,24 @@ main {
   flex-direction: column;
   gap: 24px;
 }
+
+legend {
+  display: flex;
+  padding: 5px;
+
+  text-transform: uppercase;
+  background-color: lavender;
+}
+
+fieldset {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  button {
+    padding: 10px;
+  }
+}

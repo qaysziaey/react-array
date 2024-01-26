@@ -7,6 +7,14 @@ function App() {
     <>
       <header>
         <h1>Array function magic</h1>
+        <fieldset>
+          <legend>Filter cards</legend>
+          <button>All</button>
+          <button>Male</button>
+          <button>Female</button>
+          <button>By name</button>
+          <button>By Age</button>
+        </fieldset>
       </header>
       <main>
         <section className="card-list">
