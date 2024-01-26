@@ -23,12 +23,21 @@ main {
   gap: 24px;
 }
 
+.legend-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
 legend {
   display: flex;
   padding: 5px;
-
   text-transform: uppercase;
-  background-color: lavender;
+  color: #3742fa;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 fieldset {
@@ -39,20 +48,15 @@ fieldset {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
   button {
     padding: 10px 14px;
     border: 2px solid #f1f2f6;
     border-radius: 8px;
+    min-width: 120px;
 
     &:hover {
       background-color: #dfe4ea;
-    }
-    &:active {
-      background-color: #2f3542;
-      color: white;
-    }
-    &:visited {
-      border: 2px solid #2f3542;
     }
   }
 }
@@ -60,4 +64,8 @@ fieldset {
 .active {
   background-color: #2f3542;
   color: white;
+}
+.in-active {
+  background-color: #dfe4ea;
+  color: #747d8c;
 }
