@@ -56,15 +56,19 @@ fieldset {
   gap: 10px;
   flex-wrap: wrap;
   background-color: #1e2227;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
   button {
     padding: 10px 14px;
     border: 1px solid #292f36;
     border-radius: 8px;
     min-width: 120px;
     font-size: 16px;
-
     &:hover {
-      border: 1px solid #3742fa;
+      border: 1px solid #5352ed;
       color: white;
       transform: all 3000ms ease-in-out;
       background-color: #3741fa27;
@@ -78,10 +82,10 @@ fieldset {
 }
 
 .active-btn--highlight {
-  background-color: #3742fa;
+  background-color: #5352ed;
   color: white;
-  border: 1px solid #3742fa;
+  border: 1px solid #5352ed;
 }
 h1 {
-  color: #5352ed;
+  color: #fbc531;
 }

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-
 import { Card } from "./components/Card";
 import { users } from "./data/users";
 

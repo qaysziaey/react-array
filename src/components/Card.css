@@ -4,12 +4,11 @@
   padding: 2em;
   border-radius: 6px;
   background-color: #181b1f;
-
   transition: all 0.5s;
+
   &:hover {
     z-index: 1;
-    /* transform: scale(1.05); */
-    box-shadow: inset 0 0 8px #5352ed;
+    box-shadow: inset 0 2px 8px #5352ed;
     color: white;
     border: #292f36;
     background: rgba(83, 82, 237, 1) 100%;
